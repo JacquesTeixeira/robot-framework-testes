@@ -2,9 +2,6 @@
 Library  SeleniumLibrary
 Test Setup  Open Browser  browser=chrome
 Test Teardown  Close All Browsers  
-***Variables***
-{GOOGLE_URL}
-{BLACKLE_URL}
 *** Test Cases ***
 Scenario 01: Google Search
   Go To         http://www.google.com/
