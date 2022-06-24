@@ -2,4 +2,8 @@
 #obrigatório, ou seja, imprima True caso ela tenha entre 18 e 60 anos, ou False caso contrário.
 print('Informe uma idade:')
 idade=int(input())
-if idade > 18 or idade < 60:
+if idade >18 and idade <60:
+    idade = True #Vai ter que votar!
+else:
+    idade = False #Não precisa mais votar.
+print(idade)

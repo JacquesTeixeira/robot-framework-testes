@@ -1,3 +1,6 @@
+*** Settings ***
+Documentation   Validação do código.
+
 ***Keywords***
 Confirmar endereço.
   Wait Until Element Is Visible     name=processAddress
@@ -8,10 +11,11 @@ Aceitar termos.
   Click Element                     name=processCarrier
 
 Metodo de pagamento.
-Wait Until Element Is Visible       class=bankwire
-  Click Element                     class=bankwire
-  Click Button                      xphat=//span[contains(.,'I confirm my order')]
-
+  Wait Until Element Is Visible     class=bankwire
+  Click Element                     class=bankwire  
+  Click Button                      ${I_CONFIRM_MY_ORDER}
+    
 Validação do código.
-  Page Should Contain               Text=Your order on My Store is complete.
-  Sleep  3
+  Page Should Contain Element       ${ORDER_STORE_COMPLETE}  #Três formas de validação por que eu tenho TOC.
+  Page Should Contain Element       xpath=//strong[contains(.,'$29.00')]
+  Page Should Contain Element       xpath=//strong[contains(.,'Your order will be sent as soon as we receive payment.')]
