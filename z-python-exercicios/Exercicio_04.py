@@ -2,7 +2,6 @@
 #e imprima no console o valor do troco que deve ser devolvido ao comprador.
 print('Informe o valor do produto:')
 valor=float(input())
-print('Informe o valor recebido:')#Não consegui imprimir str e float juntos.
+print('Informe o valor recebido:')
 recebido=float(input())
-print('Valor do troco:')#Não consegui imprimir str e float juntos.
-print(recebido-valor)
+print('Valor do troco:',recebido-valor,'$Reais.')

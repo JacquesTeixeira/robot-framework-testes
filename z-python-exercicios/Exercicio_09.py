@@ -3,8 +3,6 @@
 print("Digite o valor do salário do trabalhador?:")
 salario=float(input())
 valor_reajuste=salario*(20/100)
-print('20% do sálario equivale á:')
-print(valor_reajuste)
+print('20% do sálario equivale á:',valor_reajuste,'$Reais.')
 novo_salario=salario+valor_reajuste
-print('Valor do novo sálario com rejuste:')
-print(novo_salario)
+print('Valor do novo sálario com rejuste:',novo_salario,'$Reais.')

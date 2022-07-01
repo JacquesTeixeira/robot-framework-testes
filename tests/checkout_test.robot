@@ -1,7 +1,5 @@
 ***Settings***
 Documentation  Fluxo de uma compra.
-Library  SeleniumLibrary  #Usar livraria do Seleniun.
-Library  FakerLibrary     #Usar livraria FakerLibrary.
 Resource  ../resources/browser.resource     #Separei os resourcers desta forma baseado nas suas
 Resource  ../resources/selecionar.resource  #finalidades, não sei se estão de acordo com o padrão. 
 Resource  ../resources/cadastrar.resource

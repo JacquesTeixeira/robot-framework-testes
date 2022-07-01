@@ -3,5 +3,4 @@
 print('Digite uma temperatura')
 celsius=float(input())
 fahrenheit=celsius*(9/5)+32
-print('A temperatura em Fahrenheit é:')
-print(fahrenheit)
+print('A temperatura em Fahrenheit é:',fahrenheit)

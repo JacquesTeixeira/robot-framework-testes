@@ -3,5 +3,4 @@
 print('Informe uma hora:')
 hora=float(input())
 minutos=(hora*60)
-print('O valor de hora corresponde em minutos a:')#Não consegui imprimir str e float juntos.
-print(minutos)
+print('O valor da hora corresponde em minutos a:', minutos ,'minutos.')

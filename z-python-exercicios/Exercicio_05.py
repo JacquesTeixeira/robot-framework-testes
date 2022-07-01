@@ -6,4 +6,4 @@ if idade >18 and idade <60:
     idade = True #Vai ter que votar!
 else:
     idade = False #Não precisa mais votar.
-print(idade)
+print('Você vai ter que votar?',idade)
