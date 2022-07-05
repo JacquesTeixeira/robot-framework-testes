@@ -1,0 +1,1 @@
+#19.Criar um algoritmo que receba 10 números e ao final imprima na tela o menor e o maior deles.

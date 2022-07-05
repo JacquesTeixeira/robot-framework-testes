@@ -1,0 +1,1 @@
+#18.Criar um programa que receba 10 números e conte quantos deles são negativos e quantos são positivos.

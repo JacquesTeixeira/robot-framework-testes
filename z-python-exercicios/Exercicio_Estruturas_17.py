@@ -1,0 +1,1 @@
+#17. Criar um script para ler 10 números e ao final imprimir quantos são pares e quantos são ímpares.

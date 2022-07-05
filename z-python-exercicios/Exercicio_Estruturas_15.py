@@ -1,0 +1,1 @@
+#15.Escreva um script que conte quantos números entre 0 e 100 são múltiplos de 5.
