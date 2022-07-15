@@ -1,6 +1,5 @@
 ***Settings***
 Library  SeleniumLibrary  #Usar livraria do Seleniun.
-
 ***Variables***
 ${URL}                             http://www.automationpractice.com/index.php
 ${BLOUSE_IMAGE}                    xpath=//img[@title="Blouse"]

@@ -1,6 +1,5 @@
 *** Settings ***
 Documentation  selecionar
-
 ***Keywords***
 Selecionar produto.
   Wait Until Element Is Visible     ${BLOUSE_IMAGE}

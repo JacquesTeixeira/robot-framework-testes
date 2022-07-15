@@ -1,7 +1,6 @@
 *** Settings ***
 Library  FakerLibrary
 Documentation  cadastrar
-
 ***Keywords***
 Criar cadastro.
 #Lancei todas as váriaveis e os FakerLibrary neste arquivo, não sei se é a forma correta ou a ideal.
@@ -11,7 +10,6 @@ Criar cadastro.
   #Alterei para postcode porque phone_number gera um numero fora da máscada do campo.
   ${PHONE_NUMBER}                  FakerLibrary.postcode 
   ${ZIPCODE}                       FakerLibrary.zipcode
-
   Wait Until Element Is Visible     id=email_create
   Input Text    id=email_create     ${EMAIL}
   Click Button  id=SubmitCreate  

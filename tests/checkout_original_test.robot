@@ -1,9 +1,8 @@
 ***Settings***
-Library  SeleniumLibrary
-Library  FakerLibrary
-Test Setup  Open Browser  browser=chrome
-Test Teardown  Close All Browsers
-
+Library         SeleniumLibrary
+Library         FakerLibrary
+Test Setup      Open Browser  browser=chrome
+Test Teardown   Close All Browsers
 ***Variables***
 ${URL}                             http://www.automationpractice.com/index.php
 ${BLOUSE_IMAGE}                    xpath=//img[@title="Blouse"]
@@ -12,7 +11,6 @@ ${PROCED_TO_CHECKOUT_BUTTON}       xpath=//a[@title="Proceed to checkout"]
 ${PROCED_TO_CHECKOUT_BUTTON_2}     xpath=(//span[contains(.,'Proceed to checkout')])[2]
 ${I_CONFIRM_MY_ORDER}              xpath=//button[@class = 'button btn btn-default button-medium']
 ${ORDER_STORE_COMPLETE}            xpath=//strong[contains(.,'Your order on My Store is complete.')]
-
 ***Test Cases***
 Scenario 01: Checkout with sucess
   ${EMAIL} =                       FakerLibrary.email
@@ -24,7 +22,6 @@ Scenario 01: Checkout with sucess
   #${DIADOMESFAKE}=                 FakerLibrary.Day Of Month 
   Go To                            ${URL}           
   Maximize Browser Window
-
 #Selecionar a adicionar produto ao carrinho.
   Wait Until Element Is Visible    ${BLOUSE_IMAGE}
   Mouse Over                       ${BLOUSE_IMAGE}
@@ -33,12 +30,10 @@ Scenario 01: Checkout with sucess
   Click Element                    ${PROCED_TO_CHECKOUT_BUTTON}
   Wait Until Element Is Visible    ${PROCED_TO_CHECKOUT_BUTTON_2}
   Click Element                    ${PROCED_TO_CHECKOUT_BUTTON_2}
-
 #Criar novo usuário.
   Wait Until Element Is Visible  id=email_create
   Input Text    id=email_create   ${EMAIL}
   Click Button  id=SubmitCreate  
-
 #Preencher cadastro.
   Wait Until Element Is Visible     id=id_gender1
   Click Element                     id=id_gender1
@@ -52,20 +47,16 @@ Scenario 01: Checkout with sucess
   Input Text                        id=postcode            ${ZIPCODE}
   Input Text                        id=phone_mobile        51 9999999
   Click Button                      id=submitAccount
-
 #Confirmar endereço de entrega.
   Wait Until Element Is Visible     name=processAddress
   Click Element                     name=processAddress
-
 #Confirmar regras.
   Select Checkbox                   id=cgv
   Click Element                     name=processCarrier
-
 #Confirmar forma de pagamento.
   Wait Until Element Is Visible     class=bankwire
   Click Element                     class=bankwire  
   Click Button                      ${I_CONFIRM_MY_ORDER}
-  
 #Método de confirmação do teste.
   Page Should Contain Element       ${ORDER_STORE_COMPLETE}
   Page Should Contain Element       xpath=//strong[contains(.,'$29.00')]

@@ -10,7 +10,6 @@ ${Texto_Blouses}       (//a[@href='http://automationpractice.com/index.php?id_pr
 *** Test Cases ***
 Scenario 01: Comprar Blusas "Blouses"
   Go To         http://www.automationpractice.com/index.php   #Keyword ir para página.
-
   Input Text   id=search_query_top   Blouse   #Keyword inserir texto "Blouse" no campo de busca.
 
   Click Button   name=submit_search    #Keyword clicar no botão de busca.
