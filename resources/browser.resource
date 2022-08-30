@@ -1,7 +1,8 @@
 *** Settings ***
-Documentation   browser.
-
+Documentation   Armazena variavel e configurações do navegador.
 ***Keywords***
-Abrir site.
-  Go To                            ${URL}           
+Abrir o navegador.
+  Go To                           ${URL}
   Maximize Browser Window
+  Wait Until Element Is Visible   ${SING_IN}  
+  Sleep   1
